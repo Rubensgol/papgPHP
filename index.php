@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<?php
+    function pa($felem, $razao, $nelem){
+        $sequencia =array();
+        for ($i=0; $i <$nelem ; $i++) { 
+            $sequencia[$i]=$felem +(($i)*$razao);
+        }
+        return $sequencia;
+    }
+    function pg($felem, $razao, $nelem){
+        $sequencia = array();
+        for ($i=0; $i <$nelem ; $i++) { 
+            $sequencia[$i]= $felem * pow($razao,$i);
+        }
+        return $sequencia;
+    }
+    $felem=isset($_POST['felem']) ?$_POST['felem']:0;
+    $razao=isset($_POST['razao']) ?$_POST['razao']:0;
+    $nelem=isset($_POST['nelem']) ?$_POST['nelem']:0;
+
+?>
 
 <html>
 <head>
@@ -28,4 +48,11 @@
     <br>
     <input type="submit" value="Salvar">
     </form>
+    <?php
+        $lista=pg($felem,$razao,$nelem);
+        foreach ($lista as $elem ) {
+            echo $elem.", ";
+        }
+    ?>
 </body>
+</html>
