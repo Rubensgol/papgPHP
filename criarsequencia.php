@@ -51,8 +51,11 @@ $filename = isset($_POST['namefile']) ? $_POST['namefile'] : "valores";
         <label for="namefile">Nome do arquivo JSON:</label>
         <input type="text" id="namefile" name="namefile" placeholder="filename.json">
         <br>
+        
         <input type="submit" value="Salvar">
+       
     </form>
+    <a href="index.html"><button>Voltar para o menu inicial</button></a>
     <?php
     $lista;
     if ($escolha == "PA") {

@@ -14,7 +14,10 @@
         <label for="failename">Escreva o nome do arquivo que deseja carregar:</label>
         <input type="text" id="filename" name="filename" placeholder="filename.json"><br>
         <input type="submit" value="Carregar">
+        
     </form>
+    <a href="index.html"><button>Voltar para o menu inicial</button></a>
+    <br>
     <?php
     $filename = isset($_POST['filename']) ? $_POST['filename'] : "sequencia1.json";
     $arquivo = file_get_contents($filename);
